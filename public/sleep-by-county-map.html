@@ -1,0 +1,39 @@
+<h1>
+    Zooming into the USA:<br />
+    Prevalence of Short Sleep by County (2022)
+</h1>
+<div style="display: flex">
+    <div style="width: 30%">
+        <h4>Observations</h4>
+        <p>
+            There is far more variety in this data than was initially expected.
+            There are some counties with less than 25% prevalence of short sleep
+            and there are some with even more than 50%!
+        </p>
+        <p>
+            Further examination is necessary to understand exactly why there is
+            so much variation. But this data could be utilized to target
+            specific districts with the goal of further reinforcing the
+            importance of sleep in early school curriculum.
+        </p>
+        <p>
+            It is also important to note that there are a couple of missing
+            counties, signified by grey boxes. These counties' data was not
+            present in the CDC PLACES dataset.
+        </p>
+        <p>
+            Note that darker reds imply higher prevalence of insufficient sleep.
+            Insufficient sleep is defined as less than 7 hours of sleep per
+            24-hour period on average.
+        </p>
+    </div>
+    <div style="flex-grow: 1" id="sleep-by-county-map">
+        <svg id="sleep-by-county-map-svg"></svg>
+    </div>
+</div>
+
+<a
+    href="https://data.cdc.gov/500-Cities-Places/PLACES-County-Data-GIS-Friendly-Format-2024-releas/i46a-9kgh/about_data
+"
+    >CDC Places County Dataset
+</a>

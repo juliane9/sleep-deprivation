@@ -1,0 +1,560 @@
+[
+    {
+        "country": "us",
+        "avg_sleep_quality": "0.77885017246852",
+        "avg_duration": "27528.300952472186",
+        "avg_snore_duration": "2711.280143463974",
+        "avg_bedtime": "-0.02375434138644403",
+        "avg_wakeup": "0.2957776976491322",
+        "group_size": "271189"
+    },
+    {
+        "country": "jp",
+        "avg_sleep_quality": "0.7062073787610248",
+        "avg_duration": "24570.33131019924",
+        "avg_snore_duration": "3710.105389787127",
+        "avg_bedtime": "0.007272648058215652",
+        "avg_wakeup": "0.2914369803333224",
+        "group_size": "98527"
+    },
+    {
+        "country": "nz",
+        "avg_sleep_quality": "0.7882537039045873",
+        "avg_duration": "28171.88264904829",
+        "avg_snore_duration": "2751.455821712056",
+        "avg_bedtime": "-0.0311071813789867",
+        "avg_wakeup": "0.2956809872515122",
+        "group_size": "6357"
+    },
+    {
+        "country": "id",
+        "avg_sleep_quality": "0.7343936310223335",
+        "avg_duration": "25852.580116959067",
+        "avg_snore_duration": "2043.8657575187717",
+        "avg_bedtime": "-0.00837745009927181",
+        "avg_wakeup": "0.2910465814528112",
+        "group_size": "855"
+    },
+    {
+        "country": "at",
+        "avg_sleep_quality": "0.7705948127338346",
+        "avg_duration": "27552.20421926336",
+        "avg_snore_duration": "3043.788240866815",
+        "avg_bedtime": "-0.020120414159038712",
+        "avg_wakeup": "0.29976139715992545",
+        "group_size": "5783"
+    },
+    {
+        "country": "it",
+        "avg_sleep_quality": "0.7590242451290253",
+        "avg_duration": "26868.059552026545",
+        "avg_snore_duration": "3438.2442075230506",
+        "avg_bedtime": "0.003956546980323223",
+        "avg_wakeup": "0.31517204766512813",
+        "group_size": "16876"
+    },
+    {
+        "country": "za",
+        "avg_sleep_quality": "0.7653414219598598",
+        "avg_duration": "27085.915228231683",
+        "avg_snore_duration": "2436.587470564196",
+        "avg_bedtime": "-0.04559642129537438",
+        "avg_wakeup": "0.26870648533745495",
+        "group_size": "2607"
+    },
+    {
+        "country": "ru",
+        "avg_sleep_quality": "0.757045642376465",
+        "avg_duration": "26963.16239316239",
+        "avg_snore_duration": "2126.487544453324",
+        "avg_bedtime": "0.021012358962748733",
+        "avg_wakeup": "0.3336174490955814",
+        "group_size": "10764"
+    },
+    {
+        "country": null,
+        "avg_sleep_quality": "0.7578383347995755",
+        "avg_duration": "26781.081091088636",
+        "avg_snore_duration": "2477.397215271028",
+        "avg_bedtime": "0.0068753994075796115",
+        "avg_wakeup": "0.31703726445165287",
+        "group_size": "8102"
+    },
+    {
+        "country": "lv",
+        "avg_sleep_quality": "0.7709603878454654",
+        "avg_duration": "27805.05807622504",
+        "avg_snore_duration": "3083.032997140289",
+        "avg_bedtime": "-0.006745022603062756",
+        "avg_wakeup": "0.3156044262572309",
+        "group_size": "1102"
+    },
+    {
+        "country": "eg",
+        "avg_sleep_quality": "0.698590790194437",
+        "avg_duration": "24958.150411280843",
+        "avg_snore_duration": "1714.6774156733613",
+        "avg_bedtime": "0.0405245151724433",
+        "avg_wakeup": "0.33132171123730914",
+        "group_size": "851"
+    },
+    {
+        "country": "lu",
+        "avg_sleep_quality": "0.7666239794614438",
+        "avg_duration": "27119.505843071787",
+        "avg_snore_duration": "3693.006724936363",
+        "avg_bedtime": "-0.007274071477329931",
+        "avg_wakeup": "0.3069046315900772",
+        "group_size": "599"
+    },
+    {
+        "country": "au",
+        "avg_sleep_quality": "0.7860460458476042",
+        "avg_duration": "27852.44438936885",
+        "avg_snore_duration": "2242.2768031710416",
+        "avg_bedtime": "-0.03353961465933959",
+        "avg_wakeup": "0.28961661526270155",
+        "group_size": "42366"
+    },
+    {
+        "country": "hu",
+        "avg_sleep_quality": "0.7643248658191215",
+        "avg_duration": "27054.960976448336",
+        "avg_snore_duration": "2890.1328832037066",
+        "avg_bedtime": "-0.012185367448946086",
+        "avg_wakeup": "0.3016235229768683",
+        "group_size": "5817"
+    },
+    {
+        "country": "se",
+        "avg_sleep_quality": "0.786698280345414",
+        "avg_duration": "27930.561643303685",
+        "avg_snore_duration": "3149.7516063746725",
+        "avg_bedtime": "-0.019187042308967783",
+        "avg_wakeup": "0.30477045087142474",
+        "group_size": "25753"
+    },
+    {
+        "country": "br",
+        "avg_sleep_quality": "0.7303935921236601",
+        "avg_duration": "25733.42985887404",
+        "avg_snore_duration": "1669.1028871057617",
+        "avg_bedtime": "-0.009491139391083215",
+        "avg_wakeup": "0.2884651611714116",
+        "group_size": "26076"
+    },
+    {
+        "country": "mx",
+        "avg_sleep_quality": "0.7378176757334951",
+        "avg_duration": "26114.70360915494",
+        "avg_snore_duration": "3380.9635041113397",
+        "avg_bedtime": "-0.009726576944745725",
+        "avg_wakeup": "0.292544668535057",
+        "group_size": "11360"
+    },
+    {
+        "country": "tr",
+        "avg_sleep_quality": "0.7375902290504287",
+        "avg_duration": "25923.606760952047",
+        "avg_snore_duration": "3209.0894921095914",
+        "avg_bedtime": "0.038365113430081595",
+        "avg_wakeup": "0.3383376665532145",
+        "group_size": "2899"
+    },
+    {
+        "country": "il",
+        "avg_sleep_quality": "0.7616538667583989",
+        "avg_duration": "26577.688669950738",
+        "avg_snore_duration": "2395.3804991146917",
+        "avg_bedtime": "0.011674610925329157",
+        "avg_wakeup": "0.3191565307567071",
+        "group_size": "2030"
+    },
+    {
+        "country": "pt",
+        "avg_sleep_quality": "0.7735791914790513",
+        "avg_duration": "27259.579587519824",
+        "avg_snore_duration": "2883.634321113948",
+        "avg_bedtime": "0.01636745881284771",
+        "avg_wakeup": "0.33236372141779436",
+        "group_size": "5673"
+    },
+    {
+        "country": "gr",
+        "avg_sleep_quality": "0.7682760892201225",
+        "avg_duration": "26956.89945945946",
+        "avg_snore_duration": "3702.3337387524425",
+        "avg_bedtime": "0.03172606870440131",
+        "avg_wakeup": "0.34339591643053735",
+        "group_size": "925"
+    },
+    {
+        "country": "ma",
+        "avg_sleep_quality": "0.7358177077942623",
+        "avg_duration": "26653.99166666667",
+        "avg_snore_duration": "1809.54624772531",
+        "avg_bedtime": "0.00895258687862068",
+        "avg_wakeup": "0.31814285624788174",
+        "group_size": "720"
+    },
+    {
+        "country": "bg",
+        "avg_sleep_quality": "0.7661283725313373",
+        "avg_duration": "26965.68138801261",
+        "avg_snore_duration": "2299.7597360613463",
+        "avg_bedtime": "0.017086656453142415",
+        "avg_wakeup": "0.3292893499898271",
+        "group_size": "951"
+    },
+    {
+        "country": "ar",
+        "avg_sleep_quality": "0.7375295898272495",
+        "avg_duration": "26292.284437434275",
+        "avg_snore_duration": "1533.8526275496001",
+        "avg_bedtime": "0.0286174445002824",
+        "avg_wakeup": "0.33276100308300693",
+        "group_size": "1902"
+    },
+    {
+        "country": "vn",
+        "avg_sleep_quality": "0.7214057126414657",
+        "avg_duration": "25672.048681541586",
+        "avg_snore_duration": "3070.989834271907",
+        "avg_bedtime": "0.007673347114031734",
+        "avg_wakeup": "0.30404986091367375",
+        "group_size": "986"
+    },
+    {
+        "country": "tw",
+        "avg_sleep_quality": "0.7248048335538151",
+        "avg_duration": "25344.366671635118",
+        "avg_snore_duration": "3928.8100241718844",
+        "avg_bedtime": "0.04851269211949581",
+        "avg_wakeup": "0.34151058473867085",
+        "group_size": "6709"
+    },
+    {
+        "country": "kr",
+        "avg_sleep_quality": "0.7072604695242438",
+        "avg_duration": "24825.091591335487",
+        "avg_snore_duration": "3647.033317773715",
+        "avg_bedtime": "0.03201231568960772",
+        "avg_wakeup": "0.31869650887800827",
+        "group_size": "11726"
+    },
+    {
+        "country": "no",
+        "avg_sleep_quality": "0.7754660409882",
+        "avg_duration": "27556.338914323078",
+        "avg_snore_duration": "2516.546520314087",
+        "avg_bedtime": "-8.790107935828599E-5",
+        "avg_wakeup": "0.31926048288526593",
+        "group_size": "7645"
+    },
+    {
+        "country": "sk",
+        "avg_sleep_quality": "0.7718296953065789",
+        "avg_duration": "27343.62477558349",
+        "avg_snore_duration": "2778.0421809930313",
+        "avg_bedtime": "-0.015012895089753293",
+        "avg_wakeup": "0.30212867135849547",
+        "group_size": "1114"
+    },
+    {
+        "country": "pl",
+        "avg_sleep_quality": "0.762653725051749",
+        "avg_duration": "27028.89694656489",
+        "avg_snore_duration": "2478.8276849925924",
+        "avg_bedtime": "0.002514865893980109",
+        "avg_wakeup": "0.3158456318923948",
+        "group_size": "5502"
+    },
+    {
+        "country": "ph",
+        "avg_sleep_quality": "0.7154783370962143",
+        "avg_duration": "25504.773794808403",
+        "avg_snore_duration": "3401.4416266464377",
+        "avg_bedtime": "0.00221653702538878",
+        "avg_wakeup": "0.3000859959348132",
+        "group_size": "809"
+    },
+    {
+        "country": "my",
+        "avg_sleep_quality": "0.7169643930738061",
+        "avg_duration": "25223.570717131475",
+        "avg_snore_duration": "3228.9036716588616",
+        "avg_bedtime": "0.020359098693590014",
+        "avg_wakeup": "0.3126465600193162",
+        "group_size": "1004"
+    },
+    {
+        "country": "fi",
+        "avg_sleep_quality": "0.7947036045325716",
+        "avg_duration": "28437.017917675534",
+        "avg_snore_duration": "3148.152195237616",
+        "avg_bedtime": "-0.0022846770357591185",
+        "avg_wakeup": "0.32744932623906214",
+        "group_size": "4130"
+    },
+    {
+        "country": "cr",
+        "avg_sleep_quality": "0.7504551969389772",
+        "avg_duration": "26406.375170532065",
+        "avg_snore_duration": "2749.684445415559",
+        "avg_bedtime": "-0.040252351012856624",
+        "avg_wakeup": "0.2664069851917533",
+        "group_size": "733"
+    },
+    {
+        "country": "cl",
+        "avg_sleep_quality": "0.7390489260565762",
+        "avg_duration": "26617.53395784543",
+        "avg_snore_duration": "2855.228068513717",
+        "avg_bedtime": "0.023505171826725534",
+        "avg_wakeup": "0.3314543160768662",
+        "group_size": "1708"
+    },
+    {
+        "country": "cn",
+        "avg_sleep_quality": "0.7527411381297439",
+        "avg_duration": "26273.78875233255",
+        "avg_snore_duration": "4133.3611015355345",
+        "avg_bedtime": "0.029834900273070186",
+        "avg_wakeup": "0.33333852590133173",
+        "group_size": "15541"
+    },
+    {
+        "country": "ro",
+        "avg_sleep_quality": "0.7594440346403785",
+        "avg_duration": "26885.156574704404",
+        "avg_snore_duration": "2939.61996369978",
+        "avg_bedtime": "0.019795380149943764",
+        "avg_wakeup": "0.33107157347157584",
+        "group_size": "2791"
+    },
+    {
+        "country": "es",
+        "avg_sleep_quality": "0.7714482805324727",
+        "avg_duration": "27382.628140703517",
+        "avg_snore_duration": "2919.4409525379383",
+        "avg_bedtime": "0.011062834192399378",
+        "avg_wakeup": "0.3289104446355729",
+        "group_size": "14527"
+    },
+    {
+        "country": "hr",
+        "avg_sleep_quality": "0.7518227814108444",
+        "avg_duration": "26687.890625",
+        "avg_snore_duration": "2482.1603321200073",
+        "avg_bedtime": "0.019766778083872193",
+        "avg_wakeup": "0.3294028166351904",
+        "group_size": "640"
+    },
+    {
+        "country": "de",
+        "avg_sleep_quality": "0.7734038194296546",
+        "avg_duration": "27353.08402180393",
+        "avg_snore_duration": "3083.5867120094304",
+        "avg_bedtime": "-0.01168155066277074",
+        "avg_wakeup": "0.3056719493226066",
+        "group_size": "46964"
+    },
+    {
+        "country": "nl",
+        "avg_sleep_quality": "0.8070213879780451",
+        "avg_duration": "28528.07024058577",
+        "avg_snore_duration": "2828.8010628843876",
+        "avg_bedtime": "-0.00999955468400518",
+        "avg_wakeup": "0.32115194287439486",
+        "group_size": "38240"
+    },
+    {
+        "country": "ec",
+        "avg_sleep_quality": "0.7498936137587876",
+        "avg_duration": "26563.827838827845",
+        "avg_snore_duration": "2097.62986320775",
+        "avg_bedtime": "-0.020057159521564137",
+        "avg_wakeup": "0.28721787239831437",
+        "group_size": "546"
+    },
+    {
+        "country": "ua",
+        "avg_sleep_quality": "0.7778804690307205",
+        "avg_duration": "27633.779220779215",
+        "avg_snore_duration": "2569.396722715785",
+        "avg_bedtime": "0.01582344254120445",
+        "avg_wakeup": "0.33669715837604725",
+        "group_size": "1540"
+    },
+    {
+        "country": "ca",
+        "avg_sleep_quality": "0.7788654786435951",
+        "avg_duration": "27568.868402873715",
+        "avg_snore_duration": "2745.5643313780743",
+        "avg_bedtime": "-0.013965223734491185",
+        "avg_wakeup": "0.30616993671532994",
+        "group_size": "28952"
+    },
+    {
+        "country": "sg",
+        "avg_sleep_quality": "0.7303626248020527",
+        "avg_duration": "25760.856356126667",
+        "avg_snore_duration": "3564.467044238249",
+        "avg_bedtime": "0.02023791042385033",
+        "avg_wakeup": "0.31824846009703595",
+        "group_size": "2179"
+    },
+    {
+        "country": "fr",
+        "avg_sleep_quality": "0.784298938637419",
+        "avg_duration": "27881.16855814417",
+        "avg_snore_duration": "2952.098312691871",
+        "avg_bedtime": "6.237793022327788E-4",
+        "avg_wakeup": "0.32424524519905895",
+        "group_size": "40004"
+    },
+    {
+        "country": "hk",
+        "avg_sleep_quality": "0.7359042694373641",
+        "avg_duration": "25837.29570429571",
+        "avg_snore_duration": "4310.716082418259",
+        "avg_bedtime": "0.03647231097398",
+        "avg_wakeup": "0.3342059037189115",
+        "group_size": "2002"
+    },
+    {
+        "country": "cz",
+        "avg_sleep_quality": "0.768491165844605",
+        "avg_duration": "27193.807187112765",
+        "avg_snore_duration": "2840.7904492559514",
+        "avg_bedtime": "-0.011153720705189385",
+        "avg_wakeup": "0.3041339512736482",
+        "group_size": "4035"
+    },
+    {
+        "country": "in",
+        "avg_sleep_quality": "0.7008393118158839",
+        "avg_duration": "24879.075738125804",
+        "avg_snore_duration": "2560.0869753484153",
+        "avg_bedtime": "0.008645393175871905",
+        "avg_wakeup": "0.2970563590653033",
+        "group_size": "1558"
+    },
+    {
+        "country": "be",
+        "avg_sleep_quality": "0.7875120157045975",
+        "avg_duration": "27788.030303030304",
+        "avg_snore_duration": "2900.0764363982094",
+        "avg_bedtime": "-0.0035163382413396314",
+        "avg_wakeup": "0.3193905283567509",
+        "group_size": "8547"
+    },
+    {
+        "country": "pe",
+        "avg_sleep_quality": "0.7255448194724015",
+        "avg_duration": "25866.484552845526",
+        "avg_snore_duration": "1536.3977791523116",
+        "avg_bedtime": "-0.005866423104623618",
+        "avg_wakeup": "0.2930756027569948",
+        "group_size": "615"
+    },
+    {
+        "country": "co",
+        "avg_sleep_quality": "0.7304998053938531",
+        "avg_duration": "25627.9349005425",
+        "avg_snore_duration": "1424.9088968624544",
+        "avg_bedtime": "-0.03180366970405054",
+        "avg_wakeup": "0.26451908598580576",
+        "group_size": "2212"
+    },
+    {
+        "country": "dk",
+        "avg_sleep_quality": "0.7820397936043249",
+        "avg_duration": "27664.75714285716",
+        "avg_snore_duration": "3256.4426905381256",
+        "avg_bedtime": "-0.019640885808454574",
+        "avg_wakeup": "0.30100774020853877",
+        "group_size": "7980"
+    },
+    {
+        "country": "ee",
+        "avg_sleep_quality": "0.7930106274983814",
+        "avg_duration": "28395.011778563014",
+        "avg_snore_duration": "2400.7085633519473",
+        "avg_bedtime": "0.008260489761178035",
+        "avg_wakeup": "0.3373226378098484",
+        "group_size": "849"
+    },
+    {
+        "country": "cy",
+        "avg_sleep_quality": "0.7862768010004033",
+        "avg_duration": "27401.42123287671",
+        "avg_snore_duration": "3438.2763948034867",
+        "avg_bedtime": "-0.004023539242581118",
+        "avg_wakeup": "0.31517271367576905",
+        "group_size": "584"
+    },
+    {
+        "country": "gb",
+        "avg_sleep_quality": "0.7900539916646879",
+        "avg_duration": "27964.97572099818",
+        "avg_snore_duration": "2983.9170241325373",
+        "avg_bedtime": "-0.013657532468432066",
+        "avg_wakeup": "0.31104021471932325",
+        "group_size": "72573"
+    },
+    {
+        "country": "th",
+        "avg_sleep_quality": "0.7387772571415978",
+        "avg_duration": "26241.390904311247",
+        "avg_snore_duration": "2693.9178546699723",
+        "avg_bedtime": "0.012725082884436346",
+        "avg_wakeup": "0.31625863690830436",
+        "group_size": "3804"
+    },
+    {
+        "country": "ae",
+        "avg_sleep_quality": "0.7508621875478396",
+        "avg_duration": "26519.841666666667",
+        "avg_snore_duration": "2436.200705711658",
+        "avg_bedtime": "0.007289034569425882",
+        "avg_wakeup": "0.3147977726300558",
+        "group_size": "2280"
+    },
+    {
+        "country": "sa",
+        "avg_sleep_quality": "0.719914708785678",
+        "avg_duration": "25444.295376121467",
+        "avg_snore_duration": "2327.3591360783125",
+        "avg_bedtime": "0.054558311337540105",
+        "avg_wakeup": "0.34793865456639794",
+        "group_size": "1449"
+    },
+    {
+        "country": "ch",
+        "avg_sleep_quality": "0.7734809265652437",
+        "avg_duration": "27429.07350052877",
+        "avg_snore_duration": "2722.4530477772696",
+        "avg_bedtime": "-0.015232143985756662",
+        "avg_wakeup": "0.30254225635899346",
+        "group_size": "13238"
+    },
+    {
+        "country": "lt",
+        "avg_sleep_quality": "0.7645990634364683",
+        "avg_duration": "27277.52093476144",
+        "avg_snore_duration": "2307.6136022203",
+        "avg_bedtime": "-6.172405827954986E-4",
+        "avg_wakeup": "0.31527400932976196",
+        "group_size": "1027"
+    },
+    {
+        "country": "ie",
+        "avg_sleep_quality": "0.7749752079932829",
+        "avg_duration": "27399.738544916985",
+        "avg_snore_duration": "2502.748975517974",
+        "avg_bedtime": "-0.001844784213122759",
+        "avg_wakeup": "0.3163757412205261",
+        "group_size": "3930"
+    }
+]

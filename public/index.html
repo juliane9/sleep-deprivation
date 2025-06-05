@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+
+        <title>Sleep Deprivation</title>
+
+        <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+        <script src="https://unpkg.com/topojson@3"></script>
+        <script defer src="app.js"></script>
+
+        <style>
+            .state {
+                fill: #ccc;
+                stroke: white;
+                stroke-width: 1px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 style="
+            font-size: 3em; 
+            font-weight: bold; 
+            color: #2c3e50; 
+            text-align: center; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin-top: 20px;">
+            The Hidden Impacts of Sleep Deprivation
+        </h1>
+        <p style="
+            text-align: center; 
+            font-size: 1.2em; 
+            color: #34495E; 
+            font-style: italic;">
+            How Lack of Sleep Affects Your Mind and Body
+        </p>
+            <p>By: Chon Hin Chou, Raahil Jain, Juliane Mercoli, Lunjia Dai</p>
+        </header>
+
+        <blood-pressure class="hidden"></blood-pressure>
+
+        <script src="blood-pressure.js" defer></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                function checkAndInitialize() {
+                    if (
+                        typeof initializeBloodPressureVisualization ===
+                        "function"
+                    ) {
+                        console.log(
+                            "✅ Blood Pressure Script Loaded! Initializing..."
+                        );
+                        initializeBloodPressureVisualization();
+                    } else {
+                        console.warn(
+                            "⏳ Waiting for Blood Pressure script to load..."
+                        );
+                        setTimeout(checkAndInitialize, 300);
+                    }
+                }
+                checkAndInitialize();
+            });
+        </script>
+
+        <sleep-impact class="hidden"></sleep-impact>
+
+        <brain-visualization class="hidden"></brain-visualization>
+
+        <sleep-by-country-map class="hidden"></sleep-by-country-map>
+        <sleep-by-county-map class="hidden"></sleep-by-county-map>
+
+        <br /><br /><br /><br />
+        <h4>References & Learning More</h4>
+        <ul>
+            <li>
+                Data from Mukli, Peter, et al. "Effect of 24-hour sleep
+                deprivation on cerebral hemodynamics and cognitive performance".
+                <a href="https://doi.org/10.13026/669h-cx11" target="_blank"
+                    >PhysioNet (2021)</a
+                >
+            </li>
+            <li>
+                Alhola P, Polo-Kantola P. Sleep deprivation: Impact on cognitive
+                performance.
+                <a
+                    href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2656292/"
+                    target="_blank"
+                    >Neuropsychiatr Dis Treat. 2007</a
+                >
+            </li>
+            <li>
+                Gottesman, R. F., et al. "Impact of sleep disorders and
+                disturbed sleep on brain health".
+                <a
+                    href="https://doi.org/10.1161/str.0000000000000453"
+                    target="_blank"
+                    >American Heart Association (2024)</a
+                >
+            </li>
+            <li>
+                Kato, M., Phillips, B. G., Sigurdsson, G., Narkiewicz, K.,
+                Pesek, C. A., & Somers, V. K. (2000).
+                <a
+                    href="https://doi.org/10.1161/01.hyp.35.5.1173"
+                    target="_blank"
+                >
+                    Effects of sleep deprivation on neural circulatory control </a
+                >. Hypertension, 35(5), 1173–1175.
+            </li>
+            <li>
+                Tai, B. W. S., Dawood, T., Macefield, V. G., & Yiallourou, S. R.
+                (2023).
+                <a
+                    href="https://doi.org/10.1007/s10286-023-00965-7"
+                    target="_blank"
+                >
+                    The association between sleep duration and muscle
+                    sympathetic nerve activity </a
+                >. Clinical Autonomic Research, 33(6), 647–657.
+            </li>
+            <li>
+                Centers for Disease Control and Prevention (CDC). PLACES: County
+                Data (GIS Friendly Format), 2024 release [dataset]. Accessed
+                March 1, 2025, from
+                <a
+                    href="https://data.cdc.gov/500-Cities-Places/PLACES-County-Data-GIS-Friendly-Format-2024-releas/i46a-9kgh/about_data
+"
+                    >PLACES-County-Data-GIS-Friendly-Format-2024
+                </a>
+            </li>
+            <li>
+                Sleep Cycle. Per-Country Statistics. Sleep Cycle, Accessed March
+                1, 2025, from
+                <a href="https://sandman.sleepcycle.com/data/per-country-stats"
+                    >sleepcycle.com/data/per-country-stats
+                </a>
+            </li>
+        </ul>
+        <br /><br /><br />
+
+        <footer>
+            <p>
+                <a
+                    href="https://gitlab.cs.washington.edu/cse442/25wi/fp/sleep_deprivation"
+                    >Repository</a
+                >
+                <br />
+                <a href="https://courses.cs.washington.edu/courses/cse442/25wi/"
+                    >CSE 442 Data Visualization</a
+                >
+                <br />
+                <a href="https://www.washington.edu"
+                    >University of Washington</a
+                >
+            </p>
+        </footer>
+    </body>
+    <script src="blood-pressure.js"></script>
+    <script src="maps.js"></script>
+    <script src="components.js"></script>
+</html>

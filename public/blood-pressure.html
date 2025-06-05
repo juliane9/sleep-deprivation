@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Blood Pressure</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+        <script src="blood-pressure.js"></script>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+            }
+
+            a:hover {
+                cursor: pointer;
+            }
+
+            #controls {
+                margin-bottom: 20px;
+            }
+
+            #visualization-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 50px;
+                margin: auto;
+                width: 90%;
+            }
+
+            #figure-container {
+                position: relative;
+                width: 100%;
+                max-width: 600px;
+            }
+
+            #human-image {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            #svg-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+
+            #info-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pressure-box {
+                border: 2px solid black;
+                padding: 15px;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                width: 200px;
+            }
+
+            .legend {
+                margin-top: 15px;
+            }
+
+            .legend-item {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+            }
+
+            .legend-color {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                border-radius: 50%;
+            }
+
+            .blood-flow {
+                stroke-width: 4px;
+                stroke-dashoffset: 80;
+                animation: none;
+            }
+
+            .artery {
+                stroke: red;
+                stroke-dasharray: 30, 15;
+            }
+
+            .vein {
+                stroke: #2f4f4f;
+                stroke-dasharray: 40, 20;
+            }
+
+            .heart {
+                width: 100px;
+                height: 100px;
+                position: relative;
+                animation: heartbeat 1s infinite ease-in-out;
+            }
+
+            .heart::before,
+            .heart::after {
+                content: "";
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: absolute;
+            }
+
+            .heart::before {
+                top: -50px;
+                left: 0;
+            }
+
+            .heart::after {
+                top: 0;
+                left: 50px;
+            }
+
+            @keyframes heartbeat {
+                0% {
+                    transform: scale(1);
+                }
+                25% {
+                    transform: scale(1.1);
+                }
+                50% {
+                    transform: scale(1);
+                }
+                75% {
+                    transform: scale(1.2);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            @keyframes flow-animation {
+                from {
+                    stroke-dashoffset: 80;
+                }
+                to {
+                    stroke-dashoffset: 0;
+                }
+            }
+
+            @keyframes reverse-flow-animation {
+                from {
+                    stroke-dashoffset: 0;
+                }
+                to {
+                    stroke-dashoffset: 80;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sleep deprivation impacts your blood pressure</h1>
+
+        <div id="controls">
+            <label>Gender:</label>
+            <div class="toggle-group">
+                <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="Male"
+                    checked
+                />
+                <label for="male" class="toggle-btn">Male</label>
+
+                <input type="radio" id="female" name="gender" value="Female" />
+                <label for="female" class="toggle-btn">Female</label>
+            </div>
+
+            <label>Sleep Duration:</label>
+            <input
+                type="range"
+                id="sleep-slider"
+                min="5.75"
+                max="8.5"
+                step="0.25"
+                value="7"
+            />
+            <span id="sleep-value">7</span>
+        </div>
+
+        <div id="visualization-container">
+            <!-- Human Figure (Left) -->
+            <div id="figure-container">
+                <img
+                    id="human-image"
+                    src="data/figure.jpg"
+                    alt="Circulatory System"
+                />
+                <svg id="svg-overlay"></svg>
+            </div>
+
+            <div id="info-container">
+                <div id="heart-info-container">
+                    <img class="heart" src="data/heart.png" />
+                    <h1 id="heart-rate">heart rate show here</h1>
+                </div>
+                <br />
+                <div class="pressure-box">
+                    <strong>Blood Pressure:</strong>
+                    <div id="bp-value">Loading...</div>
+                </div>
+
+                <div class="legend">
+                    <div class="legend-item">
+                        <div
+                            class="legend-color"
+                            style="background-color: red"
+                        ></div>
+                        <span>Systolic (Arteries - Blood leaving heart)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div
+                            class="legend-color"
+                            style="background-color: #2f4f4f"
+                        ></div>
+                        <span
+                            >Diastolic (Veins - Blood returning to heart)</span
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <div id="study-container">
+            <h4>Impact of Sleep Deprivation on Cardiovascular Health</h4>
+            <p>
+                Studies have shown that sleep deprivation has a significant
+                impact on cardiovascular health, particularly on blood pressure
+                regulation. Research indicates that insufficient sleep leads to
+                an increase in sympathetic nervous system activity, causing
+                higher blood pressure levels. Chronic sleep deprivation has been
+                linked to a greater risk of hypertension, which in turn
+                increases the likelihood of heart disease and stroke.
+            </p>
+
+            <p>
+                We illustrate here the different blood pressure observed
+                depending on the number of hours slept during the night, by
+                gender. It is important to remember that there are a lot of
+                other characteristics that play a role in blood pressure, like
+                age, physical education, and BMI, but a normal range is
+                considered around <strong>120/80 mmHg</strong>.
+            </p>
+            <br />
+        </div>
+        <br /><br /><br /><br />
+    </body>
+</html>

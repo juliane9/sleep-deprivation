@@ -1,0 +1,357 @@
+<style>
+    h4 {
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        border-bottom: 3px solid #4caf50;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+
+    .content-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    .brain-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -130px;
+    }
+
+    #brainSvg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .observations {
+        flex: 0 0 45%;
+        text-align: left;
+        padding-left: 20px;
+        max-width: 600px;
+    }
+
+    @media (max-width: 900px) {
+        .content-container {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .brain-container {
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+
+        .observations {
+            text-align: center;
+            max-width: 90%;
+        }
+    }
+
+    ul li {
+        font-size: 16px;
+        line-height: 1.6;
+        padding-left: 25px;
+        position: relative;
+        text-align: left;
+    }
+
+    ul li::before {
+        content: "📖";
+        font-size: 18px;
+        color: #4caf50;
+        position: absolute;
+        left: 0;
+        top: 2px;
+    }
+
+    .references {
+        font-size: 15px;
+        color: #555;
+        border-top: 2px dashed #4caf50;
+        padding-top: 10px;
+    }
+
+    .source {
+        text-align: left;
+    }
+
+    .bubble-explanation {
+        flex: 1;
+        text-align: left;
+        padding-left: 20px;
+        max-width: 500px;
+    }
+
+    text {
+        font-size: 12px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: black;
+    }
+    .button-container {
+        margin-bottom: 10px;
+    }
+
+    #toggleButton {
+        font-size: 18px;
+        padding: 12px 24px;
+        border-radius: 25px;
+        background: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #toggleButton:hover {
+        background: #214822;
+        transform: scale(1.05);
+    }
+
+    p {
+        font-family: "Arial", sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        text-align: justify;
+        padding: 10px;
+    }
+</style>
+<br /><br /><br />
+<h2>Impact of Sleep Deprivation on Cognitive Functions</h2>
+<p>
+    This visualization shows the impact of sleep deprivation on cognitive
+    performance based on behavioral tests. It does not represent direct brain
+    activity measurements but rather seeks to show which cognitive faculties,
+    associated with specific brain areas, are most impacted.
+</p>
+<br />
+<div class="button-container">
+    <button id="toggleButton">Show After Sleep Deprivation</button>
+</div>
+<div class="content-container">
+    <div class="brain-container">
+        <svg id="brainSvg" width="650" height="600"></svg>
+    </div>
+    <div class="observations">
+        <h4>Observations</h4>
+        <p>
+            Studies have consistently shown that sleep deprivation significantly
+            affects cognitive function and overall brain health. Research
+            indicates that insufficient sleep impairs memory consolidation,
+            reduces attention span, and increases stress levels due to
+            heightened cortisol production. Chronic sleep deprivation has also
+            been linked to long-term risks such as neurodegenerative diseases
+            and mental health disorders. <br />
+            <br />
+            Here, we illustrate the cognitive effects of 24-hour sleep
+            deprivation using standard CATLAB test results. Participants
+            completed reaction time, memory, and attention tests before and
+            after pulling an all-nighter, showing a clear decline in all three
+            areas. This suggests that multiple brain regions, including the
+            prefrontal and parietal cortex as well as the hippocampus, are
+            negatively impacted by sleep loss.
+        </p>
+    </div>
+</div>
+<div class="source" style="text-align: center">
+    <a href="https://doi.org/10.13026/669h-cx11">PhysioNet (2021)</a>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+<script>
+    const svg = d3.select("#brainSvg");
+    svg.append("image")
+        .attr("href", "data/brain_diagram2_edited.png")
+        .attr("width", 800)
+        .attr("height", 600);
+
+    const cognitiveTests = [
+        {
+            test: "Reaction Time",
+            codes: ["RTIFMRT"],
+            x: 240,
+            y: 220,
+            area: "Prefrontal Cortex",
+            description: "How fast you react to stimuli.",
+        },
+        {
+            test: "Memory & Learning",
+            codes: ["PALFAMS"],
+            x: 350,
+            y: 320,
+            area: "Hippocampus",
+            description: "Ability to remember word pairs.",
+        },
+        {
+            test: "Attention & Processing",
+            codes: ["RVPA"],
+            x: 350,
+            y: 150,
+            area: "Prefrontal & Parietal Cortex",
+            description: "Visual attention & pattern recognition.",
+        },
+        {
+            test: "Spatial Memory",
+            codes: ["SWMWE"],
+            x: 450,
+            y: 230,
+            area: "Parietal Lobe & Hippocampus",
+            description: "Remember and use spatial locations.",
+        },
+    ];
+
+    let showAfter = false;
+
+    function updateBubbles() {
+        d3.csv("data/SD_CANTAB_DB_public.csv").then(function (data) {
+            const beforeData = data.filter((d) =>
+                d["Subject ID"].includes("before")
+            );
+            const afterData = data.filter((d) =>
+                d["Subject ID"].includes("after")
+            );
+
+            let beforeMap = {},
+                afterMap = {};
+            beforeData.forEach(
+                (d) => (beforeMap[d["Subject ID"].replace("_before", "")] = d)
+            );
+            afterData.forEach(
+                (d) => (afterMap[d["Subject ID"].replace("_after", "")] = d)
+            );
+
+            cognitiveTests.forEach((testObj) => {
+                let beforeAvg = d3.mean(
+                    testObj.codes.map((code) =>
+                        d3.mean(
+                            Object.values(beforeMap),
+                            (d) => parseFloat(d[code]) || 0
+                        )
+                    )
+                );
+                let afterAvg = d3.mean(
+                    testObj.codes.map((code) =>
+                        d3.mean(
+                            Object.values(afterMap),
+                            (d) => parseFloat(d[code]) || 0
+                        )
+                    )
+                );
+                testObj.before = beforeAvg;
+                testObj.after = afterAvg;
+                testObj.decline = ((beforeAvg - afterAvg) / beforeAvg) * 100;
+            });
+
+            const baseSize = 40;
+            const maxIncrease = 3;
+
+            const sizeScale = d3
+                .scaleLinear()
+                .domain([0, d3.max(cognitiveTests, (d) => Math.abs(d.decline))])
+                .range([baseSize, baseSize * maxIncrease]);
+
+            let bubbles = svg.selectAll(".bubble").data(cognitiveTests);
+
+            bubbles
+                .enter()
+                .append("circle")
+                .attr("class", "bubble")
+                .merge(bubbles)
+                .transition()
+                .duration(500)
+                .attr("cx", (d) => d.x)
+                .attr("cy", (d) => d.y)
+                .attr("r", (d) => sizeScale(showAfter ? -d.decline : 0))
+
+                .attr("fill", "red")
+                .attr("opacity", 0.6);
+
+            let labels = svg.selectAll(".bubble-label").data(cognitiveTests);
+
+            labels
+                .enter()
+                .append("text")
+                .attr("class", "bubble-label")
+                .merge(labels)
+                .transition()
+                .duration(500)
+                .attr("x", (d) => d.x)
+                .attr("y", (d) => d.y + 5)
+                .text((d) => d.test);
+
+            const tooltip = d3
+                .select("body")
+                .append("div")
+                .attr("class", "braintooltip")
+                .style("position", "absolute")
+                .style("background", "white")
+                .style("padding", "5px")
+                .style("border", "1px solid black")
+                .style("border-radius", "5px")
+                .style("pointer-events", "none") // Prevents flickering
+                .style("opacity", 0);
+
+            svg.selectAll(".bubble")
+                .on("mouseover", function (event, d) {
+                    let unit = "";
+                    if (d.test === "Reaction Time")
+                        unit = "ms (lower is better)";
+                    else if (
+                        d.test === "Memory & Learning" ||
+                        d.test === "Spatial Memory"
+                    )
+                        unit = "errors (fewer is better)";
+                    else if (d.test === "Attention & Processing")
+                        unit = "% accuracy & false alarms (higher is worse)";
+
+                    tooltip.style("opacity", 1).html(`
+                <b>${d.test}</b><br>
+                🏠 <i>Brain area mainly targetted:</i> ${d.area} <br>
+                <i>Average value before:</i> ${d.before.toFixed(2)} ${unit} <br>
+                <i>Average value after:</i> ${d.after.toFixed(2)} ${unit} <br>
+                🔎 <i>What it measures:</i> ${d.description}
+            `);
+                })
+                .on("mousemove", function (event) {
+                    tooltip
+                        .style("left", event.pageX + 10 + "px")
+                        .style("top", event.pageY - 20 + "px");
+                })
+                .on("mouseout", function () {
+                    tooltip.style("opacity", 0);
+                });
+        });
+    }
+
+    document
+        .getElementById("toggleButton")
+        .addEventListener("click", function () {
+            showAfter = !showAfter;
+            this.innerText = showAfter
+                ? "Show Before Sleep Deprivation"
+                : "Show After Sleep Deprivation";
+            updateBubbles();
+        });
+
+    updateBubbles();
+</script>

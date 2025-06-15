@@ -1,6 +1,6 @@
 # Sleep Deprivation
 
-This interactive data visualization explores the multiple effects of sleep deprivation on health, cognitive performance, and emotional well-being. It combines multiple datasets and visual storytelling to highlight how lack of sleep impacts the body and mind.
+This interactive data visualization article explores the multiple effects of sleep deprivation on health, cognitive performance, and emotional well-being. It combines multiple datasets and visual storytelling to highlight how lack of sleep impacts the body and mind.
 
 The website link to see the visualization and article: https://cse442.pages.cs.washington.edu/25wi/fp/sleep_deprivation.
 
